@@ -20,8 +20,8 @@
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                             <div class="account-thumb">
                                 <h2>Register now</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur similique
-                                    deleniti pariatur enim cumque eum</p>
+                                <p>"Selamat datang di halaman pendaftaran Buat.in. Jika Anda belum memiliki akun, silakan isi formulir di bawah ini untuk
+                                mendaftar"</p>
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">

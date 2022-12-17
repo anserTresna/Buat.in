@@ -26,8 +26,10 @@
                         <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
                             <div class="account-thumb">
                                 <h2>Contact us</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis consectetur
-                                    similique deleniti pariatur enim cumque eum</p>
+                                <p>"Terima kasih telah mengunjungi halaman hubungi kami Buat.in. Jika Anda memiliki pertanyaan atau kebutuhan bantuan
+                                selama proses perencanaan pernikahan, kami siap membantu Anda.                                
+                                Anda dapat menghubungi kami melalui formulir di bawah ini</p>
+                                <p>Kami akan segera menanggapi permintaan Anda sesegera mungkin.</p>
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">

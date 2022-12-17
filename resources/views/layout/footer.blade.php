@@ -9,8 +9,11 @@
                             <a href="/"><img src="tamplate/assets/img/logo/logo.png" alt=""></a>
                         </div>
                         <div class="footer_contact">
-                            <p>John draw real poor on call my from. May she mrs furnished discourse extremely. Ask doubt noisy shade guest Lose away off why half led have near bed. At engage simple father of period others except</p>
-                            <p>Ask doubt noisy shade guest Lose away off why half led have near bed. At engage simple father of period others except</p>
+                            <p>Buat.in merupakan layanan pemasaran jasa wedding organizer yang membantu pasangan mengatur acara pernikahan mereka
+                            dengan profesional. Kami menawarkan berbagai layanan, mulai dari menentukan tema dan konsep hingga mencari vendor yang
+                            sesuai dengan budget.</p>
+                            <p>Hubungi kami sekarang untuk mulai mengatur pernikahan impian Anda.</p>
+                            
                         </div>
                     </div>
                 </div>

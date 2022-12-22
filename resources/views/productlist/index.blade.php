@@ -34,7 +34,7 @@
                 <div class="single-tranding mb-30">
                     <a href="/rumahan">
                         <div class="tranding-pro-img">
-                            <img src="assets/img/product/tranding-1.jpg" alt="">
+                            <img src="assets/gambarproduk/RUMAHAN.jpg" alt="">
                         </div>
                         <div class="tranding-pro-title">
                             <h3>Rumahan</h3>
@@ -48,7 +48,7 @@
                 <div class="single-tranding mb-30">
                     <a href="/akad">
                         <div class="tranding-pro-img">
-                            <img src="assets/img/product/tranding-2.jpg" alt="">
+                            <img src="assets/gambarproduk/AKAD (2).JPG" alt="">
                         </div>
                         <div class="tranding-pro-title">
                             <h3>Akad</h3>
@@ -62,7 +62,7 @@
                 <div class="single-tranding mb-30">
                     <a href="/gedung">
                         <div class="tranding-pro-img">
-                            <img src="assets/img/product/tranding-3.jpg" alt="">
+                            <img src="assets/gambarproduk/GEDUNG.jpeg" alt="">
                         </div>
                         <div class="tranding-pro-title">
                             <h3>Gedung</h3>

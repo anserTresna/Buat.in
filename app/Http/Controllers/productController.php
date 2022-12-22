@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+
+
 use App\Models\product;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 
 class productController extends Controller
@@ -17,9 +20,9 @@ class productController extends Controller
     {
         $title = 'DataProduk';
         $slug = 'dataproduk';
-        $dataProducts = product::all();
+        $dataProduct = product::all();
         return view('dataproduk.index', 
-                compact('title', 'slug', 'dataProducts'));
+                compact('title', 'slug', 'dataProduct'));
     }
 
     /**
@@ -31,9 +34,9 @@ class productController extends Controller
     {
         $title = ' Tambah Product';
         $slug = 'dataproduk';
-        $dataProducts = product::all();
+        $dataProduct = product::all();
         return view('dataproduk.create', 
-                compact('title', 'slug', 'dataProducts'));
+                compact('title', 'slug', 'dataProduct'));
     }
 
     /**
@@ -45,18 +48,17 @@ class productController extends Controller
     public function store(Request $request)
     {
         $file_name = $request->gambar->getClientOriginalName();
-        $request->gambar->store('public.gambarproduk');
-        $gambar = $file_name;
-
+        $request->gambar->storeAs('public/gambarproduk', $file_name );
+        $images = $file_name;
         $result = product::insert([
             'nama'=> $request->nama,
             'harga'=> $request->harga,
             'detail'=> $request->detail,
-            'gambar'=> $request->gambar,
-            'timestamps' => now()
+            'gambar'=> $images,
+            
         ]);
         if($result){
-            return redirect('/dataproduk');
+            return redirect('/dashsell');
         }else{
             return $this->create();
         }
@@ -83,9 +85,9 @@ class productController extends Controller
     {
         $title = 'Perbaharui data Produk';
         $slug = 'dataproduk';
-        $dataProducts = product::where('id','=', $id) 
+        $dataProduct = product::where('id','=', $id) 
                         ->first();
-        return view('dataproduk.update',compact('title', 'slug','dataProducts'));
+        return view('dashsell.update',compact('title', 'slug','dataProduct'));
     }
 
     /**
@@ -104,7 +106,7 @@ class productController extends Controller
                     'detail'=> $request->detail,
                     'gambar'=> $request->gambar,
                 ]);
-            return redirect('/dataproduk');
+            return redirect('/dashsell');
     }
 
     /**
@@ -117,6 +119,6 @@ class productController extends Controller
     {
         product::where('id',$id)
                 ->delete();
-            return redirect('/dataproduk');
+            return redirect('/dashsell');
     }
 }

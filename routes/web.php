@@ -122,9 +122,9 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('title', 'slug'));
 });
 
-Route::get('/dataproduk',[productController::class,'index']);
-Route::get('/dataproduk/create',[productController::class,'create']);
-Route::post('/dataproduk/store',[productController::class,'store']);
-Route::get('/dataproduk/edit/{id}',[productController::class,'edit']);
-Route::post('/dataproduk/update/{id}',[productController::class,'update']);
-Route::get('/dataproduk/destroy/{id}',[productController::class,'destroy']);
+Route::get('/dashsell',[productController::class,'index']);
+Route::get('/dashsell/create',[productController::class,'create']);
+Route::post('/dashsell/store',[productController::class,'store']);
+Route::get('/dashsell/edit/{id}',[productController::class,'edit']);
+Route::post('/dashsell/update/{id}',[productController::class,'update']);
+Route::get('/dashsell/destroy/{id}',[productController::class,'destroy']);

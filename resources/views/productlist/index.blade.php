@@ -40,7 +40,6 @@
                             <h3>Rumahan</h3>
                             <h4>BOOK NOW</h4>
                         </div>
-
                     </a>
                 </div>
             </div>
@@ -54,7 +53,6 @@
                             <h3>Akad</h3>
                             <h4>BOOK NOW</h4>
                         </div>
-                    
                     </a>
                 </div>
             </div>
@@ -68,7 +66,6 @@
                             <h3>Gedung</h3>
                             <h4>BOOK NOW</h4>
                         </div>
-                    
                     </a>
                 </div>
             </div>

@@ -23,7 +23,7 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="/dashsell" class="nav-link
+                    <a href="/seller" class="nav-link
                         {{ $slug == 'dashsell' ? 'active' : '' }}">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="/dataproduk" class="nav-link
+                    <a href="/seller/product" class="nav-link
                         {{ $slug == 'dataproduk' ? 'active' : '' }}">
                         <i class="nav-icon fas fa-table"></i>
                         <p>

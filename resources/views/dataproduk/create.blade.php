@@ -1,7 +1,7 @@
 @extends('layoutseller.main')
 @section('content')
 <h2>Form Product</h2>
-<form method="POST" action="/dashsell/store" enctype="multipart/form-data">
+<form method="POST" action="/seller/product/store" enctype="multipart/form-data">
     {{ csrf_field() }}   
    
     <div class="mb-3">
@@ -20,7 +20,7 @@
         <label class="form-label">GAMBAR</label>
         <input type="file" name="gambar"  id="gambar" class="form-control" required>
     </div>
-    <a href="/dashsell" class="btn btn-secondary">KEMBALI</a>
+    <a href="/seller/product" class="btn btn-secondary">KEMBALI</a>
     <button type="submit" class="Btn btn-primary">SIMPAN</button>
 </form>
 @endsection

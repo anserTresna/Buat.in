@@ -114,7 +114,7 @@ Route::get('/gedung', function () {
 //     return view('dashsell');
 // });
 
-Route::get('/dashsell', function () {
+Route::get('/seller', function () {
     $title = 'Dashboard';
     $slug = 'dashsell';
     return view('dashsell', compact('title', 'slug'));
@@ -126,9 +126,9 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('title', 'slug'));
 });
 
-Route::get('/dashsell',[productController::class,'index']);
-Route::get('/dashsell/create',[productController::class,'create']);
-Route::post('/dashsell/store',[productController::class,'store']);
-Route::get('/dashsell/edit/{id}',[productController::class,'edit']);
-Route::post('/dashsell/update/{id}',[productController::class,'update']);
-Route::get('/dashsell/destroy/{id}',[productController::class,'destroy']);
+Route::get('/seller/product',[productController::class,'index']);
+Route::get('/seller/product/create',[productController::class,'create']);
+Route::post('/seller/product/store',[productController::class,'store']);
+Route::get('/seller/product/edit/{id}',[productController::class,'edit']);
+Route::post('/seller/product/update/{id}',[productController::class,'update']);
+Route::get('/seller/product/destroy/{id}',[productController::class,'destroy']);

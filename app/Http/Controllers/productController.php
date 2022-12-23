@@ -21,7 +21,7 @@ class productController extends Controller
         $title = 'DataProduk';
         $slug = 'dataproduk';
         $dataProduct = product::all();
-        return view('dashsell', 
+        return view('dataproduk.index', 
                 compact('title', 'slug', 'dataProduct'));
     }
 
@@ -35,7 +35,7 @@ class productController extends Controller
         $title = ' Tambah Product';
         $slug = 'dataproduk';
         $dataProduct = product::all();
-        return view('dataproduk.index', 
+        return view('dataproduk.create', 
                 compact('title', 'slug', 'dataProduct'));
     }
 

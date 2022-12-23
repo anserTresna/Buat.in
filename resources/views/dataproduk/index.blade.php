@@ -8,7 +8,7 @@
             <th>DETAIL</th>
             <th>GAMBAR</th>
             <th>
-                <a href="dashsell/create" class="btn btn-success">
+                <a href="/seller/product/create" class="btn btn-success">
                     Tambah Product
                 </a>
             </th>
@@ -22,8 +22,8 @@
             <td>{{ $item->detail }}</td>
             <td>{{ $item->gambar }}</td>
             <td>
-                <a href="/dashsell/edit/{{ $item->id }}" class="btn btn-sm btn-warning">Edit</a>
-                <a href="/dashsell/destroy/{{ $item->id }}" class="btn btn-sm btn-danger">Hapus</a>
+                <a href="/seller/product/edit/{{ $item->id }}" class="btn btn-sm btn-warning">Edit</a>
+                <a href="/seller/product/destroy/{{ $item->id }}" class="btn btn-sm btn-danger">Hapus</a>
             </td>
         </tr>
         

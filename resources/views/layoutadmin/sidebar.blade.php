@@ -22,8 +22,8 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
               <li class="nav-item">
-                  <a href="/seller" class="nav-link
-                      {{ $slug == 'seller' ? 'active' : '' }}">
+                  <a href="/dashboard" class="nav-link
+                      {{ $slug == 'dashboard' ? 'active' : '' }}">
                       <i class="nav-icon fas fa-th"></i>
                       <p>
                           Dashboard
@@ -40,19 +40,19 @@
                   </a>
               </li>
               <li class="nav-item">
-                <a href="/seller/product" class="nav-link
-                    {{ $slug == 'product' ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-table"></i>
+                <a href="/user" class="nav-link
+                    {{ $slug == 'user' ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-user"></i>
                     <p>
-                        Product
+                        User
                     </p>
                 </a>
               <li class="nav-item">
-                <a href="/transaksi" class="nav-link
-                    {{ $slug == 'transaksi' ? 'active' : '' }}">
-                    <i class="nav-icon fas fa-list"></i>
+                <a href="/laporan" class="nav-link
+                    {{ $slug == 'laporan' ? 'active' : '' }}">
+                    <i class="nav-icon fas fa-table"></i>
                     <p>
-                        Transaksi
+                        Laporan
                     </p>
                 </a>
             </li>

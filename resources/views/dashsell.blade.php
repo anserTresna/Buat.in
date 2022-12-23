@@ -1,4 +1,5 @@
 @extends('layoutseller.main')
+@include ('layoutseller.style')
 @section('css')
 <!-- iCheck -->
 <link rel="stylesheet" href="{{ asset('adminlte') }}/plugins/icheck-bootstrap/icheck-bootstrap.min.css">

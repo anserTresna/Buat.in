@@ -41,10 +41,14 @@ Route::group(['middleware' => ['auth','role:user']], function(){
 // });
 // });
 
-// Route::group(['middleware' => ['auth','role:seller']], function(){
-//     kien gah pada bae tapi kanggo seller pada bae kien gah route kaya sing ng duwur
-//     });
-// });
+Route::group(['middleware' => ['auth','role:seller']], function(){
+    Route::get('/seller',[productController::class,'index']);
+    Route::get('/seller/create',[productController::class,'create']);
+    Route::post('/seller/store',[productController::class,'store']);
+    Route::get('/seller/edit/{id}',[productController::class,'edit']);
+    Route::post('/seller/update/{id}',[productController::class,'update']);
+    Route::get('/seller/destroy/{id}',[productController::class,'destroy']);
+    });
 
 
 Route::get('/404', function () {
@@ -110,7 +114,7 @@ Route::get('/gedung', function () {
 //     return view('dashsell');
 // });
 
-Route::get('/seller', function () {
+Route::get('/dashsell', function () {
     $title = 'Dashboard';
     $slug = 'dashsell';
     return view('dashsell', compact('title', 'slug'));
@@ -122,9 +126,9 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('title', 'slug'));
 });
 
-Route::get('/seller/product',[productController::class,'index']);
-Route::get('/seller/product/create',[productController::class,'create']);
-Route::post('/seller/product/store',[productController::class,'store']);
-Route::get('/seller/productedit/{id}',[productController::class,'edit']);
-Route::post('/seller/product/update/{id}',[productController::class,'update']);
-Route::get('/seller/product/destroy/{id}',[productController::class,'destroy']);
+Route::get('/dashsell',[productController::class,'index']);
+Route::get('/dashsell/create',[productController::class,'create']);
+Route::post('/dashsell/store',[productController::class,'store']);
+Route::get('/dashsell/edit/{id}',[productController::class,'edit']);
+Route::post('/dashsell/update/{id}',[productController::class,'update']);
+Route::get('/dashsell/destroy/{id}',[productController::class,'destroy']);

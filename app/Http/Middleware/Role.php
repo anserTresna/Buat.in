@@ -24,10 +24,12 @@ class Role
         if (Auth::user()->role == 'admin') {
             return Redirect::to('dashboard');
         } elseif (Auth::user()->role == 'seller') {
-            return Redirect::to('dashbsell');
+            return Redirect::to('/seller');
         } elseif (Auth::user()->role == 'user') {
             return Redirect::to('/');
         }
         
+        abort(401);
+
 }
 }

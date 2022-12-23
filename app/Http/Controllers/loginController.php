@@ -20,8 +20,17 @@ class loginController extends Controller
 
     if (Auth::attempt($credentials)) {
     $request->session()->regenerate();
+            if (auth()->user()->role === 'seller') {
+                // jika user seller
+                return redirect()->intended('/seller');
+            } elseif (auth()->user()->role === 'admin') {
+                // jika user admin
+                return redirect()->intended('/admin');
+                // jika user biasa
+            } else {
     return redirect()->intended('/');
     }
+}
 
     return back()->with('loginError', 'Email atau password yang dimasukkan salah!');
     }

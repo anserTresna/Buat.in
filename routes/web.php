@@ -41,10 +41,14 @@ Route::group(['middleware' => ['auth','role:user']], function(){
 // });
 // });
 
-// Route::group(['middleware' => ['auth','role:seller']], function(){
-//     kien gah pada bae tapi kanggo seller pada bae kien gah route kaya sing ng duwur
-//     });
-// });
+Route::group(['middleware' => ['auth','role:seller']], function(){
+    Route::get('/seller',[productController::class,'index']);
+    Route::get('/seller/create',[productController::class,'create']);
+    Route::post('/seller/store',[productController::class,'store']);
+    Route::get('/seller/edit/{id}',[productController::class,'edit']);
+    Route::post('/seller/update/{id}',[productController::class,'update']);
+    Route::get('/seller/destroy/{id}',[productController::class,'destroy']);
+    });
 
 
 Route::get('/404', function () {
@@ -110,11 +114,11 @@ Route::get('/gedung', function () {
 //     return view('dashsell');
 // });
 
-Route::get('/dashsell', function () {
-    $title = 'Dashboard';
-    $slug = 'dashsell';
-    return view('dashsell', compact('title', 'slug'));
-});
+// Route::get('/dashsell', function () {
+//     $title = 'Dashboard';
+//     $slug = 'dashsell';
+//     return view('dashsell', compact('title', 'slug'));
+// });
 
 Route::get('/dashboard', function () {
     $title = 'Dashboard';
@@ -122,9 +126,4 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('title', 'slug'));
 });
 
-Route::get('/dashsell',[productController::class,'index']);
-Route::get('/dashsell/create',[productController::class,'create']);
-Route::post('/dashsell/store',[productController::class,'store']);
-Route::get('/dashsell/edit/{id}',[productController::class,'edit']);
-Route::post('/dashsell/update/{id}',[productController::class,'update']);
-Route::get('/dashsell/destroy/{id}',[productController::class,'destroy']);
+

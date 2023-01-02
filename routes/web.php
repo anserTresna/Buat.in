@@ -6,6 +6,8 @@ use App\Http\Controllers\productController;
 use App\Http\Controllers\checkoutController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\registrasiController;
+use App\Http\Controllers\userController;
+use App\Http\Controllers\profilController;
 
 
 
@@ -126,9 +128,30 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('title', 'slug'));
 });
 
+Route::get('/dashboardadmin', function () {
+    $title = 'Dashboard';
+    $slug = 'dashboardamin';
+    return view('dashboardamin', compact('title', 'slug'));
+});
+
 Route::get('/seller/product',[productController::class,'index']);
 Route::get('/seller/product/create',[productController::class,'create']);
 Route::post('/seller/product/store',[productController::class,'store']);
 Route::get('/seller/product/edit/{id}',[productController::class,'edit']);
 Route::post('/seller/product/update/{id}',[productController::class,'update']);
 Route::get('/seller/product/destroy/{id}',[productController::class,'destroy']);
+
+Route::get('/user', [userController::class, 'index']);
+Route::get('/user/create', [userController::class, 'create']);
+Route::post('/user/store', [userController::class, 'store']);
+Route::get('/user/edit/{id}', [userController::class, 'edit']);
+Route::post('/user/update/{id}', [userController::class, 'update']);
+Route::get('/user/destroy/{id}', [userController::class, 'destroy']);
+
+Route::get('/profil',[profilController::class,'index']);
+Route::get('/profil/create',[profilController::class,'create']);
+Route::post('/profil/store',[profilController::class,'store']);
+Route::get('/profil/edit/{id}',[profilController::class,'edit']);
+Route::post('/profil/update/{id}',[profilController::class,'update']);
+Route::get('/profil/destroy/{id}',[profilController::class,'destroy']);
+

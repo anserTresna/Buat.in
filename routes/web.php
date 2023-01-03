@@ -3,11 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\productController;
-use App\Http\Controllers\checkoutController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\registrasiController;
 use App\Http\Controllers\userController;
 use App\Http\Controllers\profilController;
+use App\Http\Controllers\ChartController;
+use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\akadController;
+
 
 
 
@@ -155,3 +159,12 @@ Route::get('/profil/edit/{id}',[profilController::class,'edit']);
 Route::post('/profil/update/{id}',[profilController::class,'update']);
 Route::get('/profil/destroy/{id}',[profilController::class,'destroy']);
 
+Route::get('seller/transaksi', [TransaksiController::class, 'index']);
+Route::get('seller/transaksi/destroy/{id}', [TransaksiController::class, 'destroy']);
+
+Route::get('/cart', [ChartController::class, 'index']);
+
+Route::get('/checkout',[CheckoutController::class,'index']);
+Route::post('/checkout',[CheckoutController::class,'store']);
+
+Route::get('/akad', [akadController::class, 'index']);

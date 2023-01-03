@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\products;
 use App\Models\checkout;
+use Illuminate\Http\Request;
+// use App\Http\Controllers\Controller;
 
 
-class checkoutController extends Controller
+class CheckoutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +16,8 @@ class checkoutController extends Controller
      */
     public function index()
     {
-        $title = 'Checkout';
-        $slug = 'checkout';
-        $dataCheckout = checkout::join('products', 'checkout.nama','=','products.nama',)
-        ->get();
-
-        return view('checkout.index',compact('title','slug','dataCheckout'));
+        
+        return view('checkout.checkout');
     }
 
     /**
@@ -31,7 +27,9 @@ class checkoutController extends Controller
      */
     public function create()
     {
-        //
+        // $dataCheckout = checkout::all();
+        // return view('checkout.checkout', 
+        // compact('dataCheckout'));
     }
 
     /**
@@ -42,7 +40,32 @@ class checkoutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $file_name = $request->gambar->getClientOriginalName();
+        // $request->gambar->storeAs('buktiTransfer', $file_name );
+        // $images = $file_name;
+        $this->validate($request, [
+            'gambar' => 'required|image|mimes:jpg,png,jpeg,|max:2048',
+        ]);
+
+        // $image_path = $request->file("gambar")->store("buktiTransfer");
+        if ($request->file("gambar"))
+        {
+            $data = $request->file("gambar")->store("buktiTransfer");
+        }
+        $result = checkout::insert([
+            'nama'=> $request->nama,
+            'alamat'=> $request->alamat,
+            'tanggal'=> $request->tanggal,
+            'gambar'=> $data,
+            'paket'=> $request->paket,
+            'order_notes'=> $request->order_notes,
+            
+        ]);
+        if($result){
+            return redirect('/cart');
+        }else{
+            return $this->create();
+        }
     }
 
     /**

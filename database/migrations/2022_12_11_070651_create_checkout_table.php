@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('nama',100);
             $table->string('alamat');
             $table->date('tanggal');
+            $table->string('gambar');
             $table->string('paket');
+            $table->string('order_notes');
             $table->timestamps();
         });
     }

@@ -48,7 +48,7 @@
                     </p>
                 </a>
               <li class="nav-item">
-                <a href="/transaksi" class="nav-link
+                <a href="seller/transaksi" class="nav-link
                     {{ $slug == 'transaksi' ? 'active' : '' }}">
                     <i class="nav-icon fas fa-list"></i>
                     <p>

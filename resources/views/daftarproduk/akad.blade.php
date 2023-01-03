@@ -37,15 +37,15 @@
                         <div class="tranding-pro-img">
                             <img src="assets/img/product/tranding-1.jpg" alt="">
                         </div>
-                        <div class="tranding-pro-title">
-                            <h3>Silver</h3>
-                            <h4>Rp. 21.000.000</h4>
-                        </div>
+                        @foreach ($dataProduct as $item )
+                            <div class="tranding-pro-title">
+                                <h3>{{ $item->nama }}</h3>
+                                <h4>{{ $item->harga }}</h4>
+                            </div>
+                        @endforeach 
                     </a>
                 </div>
-    
         </div>
-
     </div>
     </div>
 </section>

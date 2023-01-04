@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\users;
 use Illuminate\Http\Request;
 
 class userController extends Controller
@@ -17,7 +16,7 @@ class userController extends Controller
     {
         $title = 'User';
         $slug = 'user';
-        $dataUsers = users::all();
+        $dataUsers = User::all();
         return view('user.index',compact('title','slug','dataUsers'));
     }
 
@@ -63,7 +62,7 @@ class userController extends Controller
     {
         $title = 'Perbarui Data User';
         $slug = 'user';
-        $dataUsers = users::findorFail($id);
+        $dataUsers = User::findorFail($id);
         return view('user.update',compact(['title','slug','dataUsers']));
     }
 
@@ -76,14 +75,15 @@ class userController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $id = $request->email;
-        users::where('email',$id)
-                ->update([
-                'name' => $request->name,
-                'password' => $request->password
-                
-                ]);
-        return redirect('/user');
+        $dataUsers = User::findOrfail($id);
+        $dataUsers->update($request->all());
+
+        // $id = $request->email;
+        // User::where('email',$id)
+        //         ->update([
+        //         'role' => $request->role,
+        //         ]);
+        return redirect('/admin/user');
     }
 
     /**
@@ -94,8 +94,8 @@ class userController extends Controller
      */
     public function destroy($id)
     {
-        users::where('id',$id)
+        User::where('id',$id)
                 ->delete();
-        return redirect('/user');
+        return redirect('/admin/user');
     }
 }

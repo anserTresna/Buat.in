@@ -34,10 +34,14 @@
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="single-tranding mb-30">
                     <a href="http://127.0.0.1:8000/productdetails">
-                        <div class="tranding-pro-img">
-                            <img src="assets/img/product/tranding-1.jpg" alt="">
-                        </div>
                         @foreach ($dataProduct as $item )
+                        <div class="tranding-pro-img">
+                            @if( in_array(pathinfo($item->gambar, PATHINFO_EXTENSION), ['png','jpg','jpeg']))
+                                <img src="{{ url('/storage/'.$item->gambar) }}" width="100" alt="image">
+                            @else
+                                <img src="https://www.freeiconspng.com/uploads/file-txt-icon--icon-search-engine--iconfinder-14.png">
+                            @endif
+                        </div>
                             <div class="tranding-pro-title">
                                 <h3>{{ $item->nama }}</h3>
                                 <h4>{{ $item->harga }}</h4>

@@ -11,8 +11,8 @@ use App\Http\Controllers\profilController;
 use App\Http\Controllers\ChartController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\akadController;
-
-
+use App\Http\Controllers\ProductlisController;
+use App\Http\Controllers\productdetailsController;
 
 
 /*
@@ -65,8 +65,6 @@ Route::get('/forget', function () {
     return view('forgetpassword.index');
 });
 
-
-
 Route::get('/', function () {
     return view('dashboard');
 });
@@ -78,9 +76,9 @@ Route::get('/', function () {
     return view('Home.home');
 });**/
 
-Route::get('/productlist', function () {
-    return view('productlist.index');
-});
+// Route::get('/productlist', function () {
+//     return view('productlist.index');
+// });
 Route::get('/product', function () {
     return view('product.index');
 });
@@ -168,3 +166,8 @@ Route::get('/checkout',[CheckoutController::class,'index']);
 Route::post('/checkout',[CheckoutController::class,'store']);
 
 Route::get('/akad', [akadController::class, 'index']);
+
+Route::get('/productlist', [ProductlisController::class,'index']);
+
+Route::get('/productdetails', [productdetailsController::class,'index']);
+//Route::resource('/productdetails/show/{id}', [productController::class, 'show'])

@@ -18,6 +18,6 @@ class TransaksiController extends Controller
     {
         checkout::where('id',$id)
                 ->delete();
-            return redirect('/dashsell');
+            return redirect('/seller');
     }
 }

@@ -41,37 +41,6 @@
                             <h3>Eksklusif</h3>
                             <h4>Rp. 59.000.000</h4>
                         </div>
-
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                <div class="single-tranding mb-30">
-                    <a href="http://127.0.0.1:8000/productdetails">
-                        <div class="tranding-pro-img">
-                            <img src="assets/img/product/tranding-2.jpg" alt="">
-                        </div>
-                        <div class="tranding-pro-title">
-                            <h3>Ultimate</h3>
-                            <h4>Rp. 42.000.000</h4>
-                        </div>
-                        <div class="tranding-pro-price">
-
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                <div class="single-tranding mb-30">
-                    <a href="http://127.0.0.1:8000/productdetails">
-                        <div class="tranding-pro-img">
-                            <img src="assets/img/product/tranding-3.jpg" alt="">
-                        </div>
-                        <div class="tranding-pro-title">
-                            <h3>Platinum</h3>
-                            <h4>Rp. 33.000.000</h4>
-                        </div>
-
                     </a>
                 </div>
             </div>

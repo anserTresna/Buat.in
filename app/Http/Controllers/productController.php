@@ -47,14 +47,23 @@ class productController extends Controller
      */
     public function store(Request $request)
     {
-        $file_name = $request->gambar->getClientOriginalName();
-        $request->gambar->storeAs('public/gambarproduk', $file_name );
-        $images = $file_name;
+        // $file_name = $request->gambar->getClientOriginalName();
+        // $request->gambar->storeAs('public/gambarproduk', $file_name );
+        // $images = $file_name;
+        $this->validate($request, [
+            'gambar' => 'required|image|mimes:jpg,png,jpeg,|max:2048',
+        ]);
+
+        // $image_path = $request->file("gambar")->store("buktiTransfer");
+        if ($request->file("gambar"))
+        {
+            $data = $request->file("gambar")->store("gambarproduk");
+        }
         $result = product::insert([
             'nama'=> $request->nama,
             'harga'=> $request->harga,
             'detail'=> $request->detail,
-            'gambar'=> $images,
+            'gambar'=> $data,
             
         ]);
         if($result){
@@ -88,7 +97,7 @@ class productController extends Controller
         $slug = 'dataproduk';
         $dataProduct = product::where('id','=', $id) 
                         ->first();
-        return view('dashsell.update',compact('title', 'slug','dataProduct'));
+        return view('dataproduk.update',compact('title', 'slug','dataProduct'));
     }
 
     /**
@@ -107,7 +116,7 @@ class productController extends Controller
                     'detail'=> $request->detail,
                     'gambar'=> $request->gambar,
                 ]);
-            return redirect('/dashsell');
+            return redirect('/seller/product/');
     }
 
     /**
@@ -120,6 +129,6 @@ class productController extends Controller
     {
         product::where('id',$id)
                 ->delete();
-            return redirect('/dashsell');
+            return redirect('/seller');
     }
 }

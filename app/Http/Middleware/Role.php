@@ -22,14 +22,14 @@ class Role
             return $next($request);
         }
         if (Auth::user()->role == 'admin') {
-            return Redirect::to('/admin');
+            return Redirect::to('dashboard');
         } elseif (Auth::user()->role == 'seller') {
             return Redirect::to('/seller');
         } elseif (Auth::user()->role == 'user') {
             return Redirect::to('/');
         }
-        return view ('/404');
         
+        abort(401);
 
 }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\checkout;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+// use App\Http\Controllers\Controller;
 
 
 class CheckoutController extends Controller
@@ -16,6 +16,7 @@ class CheckoutController extends Controller
      */
     public function index()
     {
+        
         return view('checkout.checkout');
     }
 

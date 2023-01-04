@@ -81,8 +81,7 @@ class productController extends Controller
      */
     public function show($id)
     {
-        $model = product::find($id);
-        return view('productdetails.index',compact('model'));
+        //
     }
 
     /**

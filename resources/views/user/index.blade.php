@@ -16,9 +16,9 @@
             <td>{{ $item->name }}</td>
             <td>{{ $item->role }}</td>
             <td>
-                <a href="/admin/user/edit/{{ $item->id }}"
+                <a href="/user/edit/{{ $item->id }}"
                     class="btn btn-sm btn-warning">Edit</a> 
-                <a href="/admin/user/destroy/{{ $item->id }}"
+                <a href="/user/destroy/{{ $item->id }}"
                     class="btn btn-sm btn-danger">Hapus</a> 
             </td>
         </tr>

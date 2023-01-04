@@ -4,7 +4,7 @@
   <a href="/" class="brand-link">
       <img src="{{ asset('adminlte') }}/dist/img/onlyus.jpeg" alt="onlyus.jpeg"
           class="brand-image img-circle elevation-3" style="opacity:.8">
-      <span class="brand-text font-weight-light">SELLER PORTAL </span>
+      <span class="brand-text font-weight-light">ADMIN BUAT.IN</span>
   </a>
   <!-- Sidebar -->
   <div class="sidebar">
@@ -14,7 +14,7 @@
               <img src="{{ asset('adminlte') }}/dist/img/adminonlyus.png" alt="profil" class="profile-user-img img-responsive img-circle" width="50" height="50">
           </div>
           <div class="info">
-              <a href="/seller" class="d-block">Welcome, {{Auth::user()->name}}</a>
+              <a href="/" class="d-block">Admin Buat.in</a>
           </div>
       </div>
       <!-- Sidebar Menu -->
@@ -22,7 +22,8 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
               <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
               <li class="nav-item">
-                  <a href="/seller" class="nav-link">
+                  <a href="/seller" class="nav-link
+                      {{ $slug == 'seller' ? 'active' : '' }}">
                       <i class="nav-icon fas fa-th"></i>
                       <p>
                           Dashboard
@@ -30,7 +31,8 @@
                   </a>
               </li>
               <li class="nav-item">
-                  <a href="/profil" class="nav-link">
+                  <a href="/profil" class="nav-link
+                      {{ $slug == 'profil' ? 'active' : '' }}">
                       <i class="nav-icon fas fa-user"></i>
                       <p>
                           Profil
@@ -38,14 +40,16 @@
                   </a>
               </li>
               <li class="nav-item">
-                <a href="/seller/product" class="nav-link">
+                <a href="/seller/product" class="nav-link
+                    {{ $slug == 'product' ? 'active' : '' }}">
                     <i class="nav-icon fas fa-table"></i>
                     <p>
                         Product
                     </p>
                 </a>
               <li class="nav-item">
-                <a href="seller/transaksi" class="nav-link">
+                <a href="seller/transaksi" class="nav-link
+                    {{ $slug == 'transaksi' ? 'active' : '' }}">
                     <i class="nav-icon fas fa-list"></i>
                     <p>
                         Transaksi
@@ -53,7 +57,7 @@
                 </a>
             </li>
                   <li class="nav-item">
-                    <a href="/logout" class="nav-link">
+                    <a href="#" class="nav-link">
                       <i class="nav-icon fas fa-sign-out-alt"></i>
                       <p>
                         Sign Out

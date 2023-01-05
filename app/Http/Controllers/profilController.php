@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\profil;
-use App\Models\users;
+use App\Models\User;
 
 
 class profilController extends Controller
@@ -18,7 +18,7 @@ class profilController extends Controller
     {
        $title = 'Profil';
        $slug = 'profil';
-       $dataUsers = users::all();
+       $dataUsers = User::all();
        return view('profil.index',compact('title', 'slug', 'dataUsers'));
     }
 
@@ -70,8 +70,10 @@ class profilController extends Controller
      */
     public function edit($id)
     {
-            $data = array('title' => 'Profil');
-            return view('profil.edit', $data);
+        $title = 'Perbarui Data Profil';
+        $slug = 'Profil';
+        $dataUsers = User::findorFail($id);
+        return view('profil.setting',compact(['title','slug','dataUsers']));
     }
 
     /**
@@ -83,7 +85,11 @@ class profilController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dataUsers = User::findOrfail($id);
+        $dataUsers->update($request->all());
+
+    
+        return redirect('/admin/profil');
     }
 
     /**

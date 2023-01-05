@@ -23,6 +23,9 @@
     </div>
     <div class="mb-3">
         <label class="form-label">GAMBAR</label>
+        <div class="form-text">
+            Format jpg, png, jpeg | Max 2MB
+        </div>
         <input type="file" name="gambar"  id="gambar" class="form-control" required onchange="previewImage()">
     </div>
     <a href="/seller/product" class="btn btn-secondary">KEMBALI</a>
@@ -42,8 +45,8 @@
         oFReader.onload = function(oFREvent) {
             imgPreview.src = oFREvent.target.result;
             $("#tampilGambar").addClass('mb-3');
-            $("#tampilGambar").width("100%");
-            $("#tampilGambar").height("300");
+            $("#tampilGambar").width("640px");
+            $("#tampilGambar").height("640px");
         }
     }
 </script>

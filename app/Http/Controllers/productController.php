@@ -67,7 +67,7 @@ class productController extends Controller
             
         ]);
         if($result){
-            return redirect('/seller');
+            return redirect('/seller/product');
         }else{
             return $this->create();
         }
@@ -128,6 +128,6 @@ class productController extends Controller
     {
         product::where('id',$id)
                 ->delete();
-            return redirect('/seller');
+            return redirect('/seller/product');
     }
 }

@@ -37,12 +37,12 @@
                 </div>
             </div>
         </div>
-        
-    @foreach  ($dataProduct as $item )
         <div class="row justify-content-center">
+    @foreach  ($dataProduct as $item )
+        
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="single-tranding mb-30">
-                    <a href="/checkout">
+                    <a href="/productdetails">
                         <div class="tranding-pro-img">
                             <img src="{{ url('/storage/'.$item->gambar) }}" alt="image" width="100px">
                         </div>
@@ -53,8 +53,9 @@
                     </a>
                 </div>
             </div>
-        </div>
+        
         @endforeach 
+        </div>
         </div>
         
 </section>

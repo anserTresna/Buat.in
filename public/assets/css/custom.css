@@ -814,7 +814,8 @@ section.shipping_area {
 }
 
 .tranding-pro-img img {
-    width: 100%;
+    width: 640px;
+    height: 640px;
 }
 
 .tranding-pro-title {

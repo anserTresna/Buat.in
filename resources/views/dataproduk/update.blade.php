@@ -18,6 +18,9 @@
     </div>
     <div class="mb-3">
         <label class="form-label">GAMBAR</label>
+        <div class="form-text">
+           Format jpg, png, jpeg | Max 2MB
+        </div>
         <input type="file" name="gambar" id="gambar" class="form-control" value="{{ $dataProduct->gambar}}" required>
     </div>
     <a href="/seller/product" class="btn btn-secondary">KEMBALI</a>

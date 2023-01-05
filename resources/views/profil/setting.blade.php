@@ -8,7 +8,7 @@
           <div class="text-center">
             <img src="{{ asset('adminlte') }}/dist/img/admin.jpg" class="img-circle elevation-2" width="50" height="50">
           </div>
-          <form action="">
+          <form action="POST">
             <div class="row">
               <div class="col">
                 <div class="form-group">

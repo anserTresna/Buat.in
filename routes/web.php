@@ -41,20 +41,50 @@ Route::group(['middleware' => ['auth','role:user']], function(){
     Route::get('/index', function () {
     return redirect('/');
     });
+    Route::get('/cart', [ChartController::class, 'index']);
+    Route::get('/checkout',[CheckoutController::class,'index']);
+    Route::post('/checkout',[CheckoutController::class,'store']);
 });
-// Route::group(['middleware' => ['auth','role:admin']], function(){
-//     isi karo halaman kanggo admin meluan percontroller kah, ko gawe route mulai sing misal /seller/blabla
-// });
-// });
+
+Route::group(['middleware' => ['auth','role:admin']], function(){
+    Route::get('/admin', function () {
+    $title = 'Dashboard';
+    $slug = 'dashboardamin';
+    return view('dashboardamin', compact('title', 'slug'));
+    });
+
+    Route::get('/admin/user', [userController::class, 'index']);
+    Route::get('/admin/user/create', [userController::class, 'create']);
+    Route::post('/admin/user/store', [userController::class, 'store']);
+    Route::get('/admin/user/edit/{id}', [userController::class, 'edit']);
+    Route::put('/admin/user/update/{id}', [userController::class, 'update']);
+    Route::get('/admin/user/destroy/{id}', [userController::class, 'destroy']);
+
+    Route::get('/admin/profil',[profilController::class,'index']);
+    Route::get('/admin/profil/create',[profilController::class,'create']);
+    Route::post('/admin/profil/store',[profilController::class,'store']);
+    Route::get('/admin/profil/edit/',[profilController::class,'edit']);
+    Route::post('/admin/profil/update/{id}',[profilController::class,'update']);
+    Route::get('/admin/profil/destroy/{id}',[profilController::class,'destroy']);
+
+});
+
 
 Route::group(['middleware' => ['auth','role:seller']], function(){
-    Route::get('/seller',[productController::class,'index']);
-    Route::get('/seller/create',[productController::class,'create']);
-    Route::post('/seller/store',[productController::class,'store']);
-    Route::get('/seller/edit/{id}',[productController::class,'edit']);
-    Route::post('/seller/update/{id}',[productController::class,'update']);
-    Route::get('/seller/destroy/{id}',[productController::class,'destroy']);
+    Route::get('/seller', function () {
+    return view('dashsell');
     });
+
+    Route::get('/seller/product',[productController::class,'index']);
+    Route::get('/seller/product/create',[productController::class,'create']);
+    Route::post('/seller/product/store',[productController::class,'store']);
+    Route::get('/seller/product/edit/{id}',[productController::class,'edit']);
+    Route::post('/seller/product/update/{id}',[productController::class,'update']);
+    Route::get('/seller/product/destroy/{id}',[productController::class,'destroy']);
+
+    Route::get('seller/transaksi', [TransaksiController::class, 'index']);
+    Route::get('seller/transaksi/destroy/{id}', [TransaksiController::class, 'destroy']);
+});
 
 
 Route::get('/404', function () {
@@ -67,6 +97,12 @@ Route::get('/forget', function () {
 
 Route::get('/', function () {
     return view('dashboard');
+});
+Route::get('/setting', function () {
+    $title = 'Dashboard';
+    $slug = 'dashboardamin';
+    
+    return view('profil.setting',compact('title', 'slug'));
 });
 
 
@@ -118,11 +154,7 @@ Route::get('/gedung', function () {
 //     return view('dashsell');
 // });
 
-Route::get('/seller', function () {
-    $title = 'Dashboard';
-    $slug = 'dashsell';
-    return view('dashsell', compact('title', 'slug'));
-});
+
 
 Route::get('/dashboard', function () {
     $title = 'Dashboard';
@@ -130,40 +162,11 @@ Route::get('/dashboard', function () {
     return view('dashboard', compact('title', 'slug'));
 });
 
-Route::get('/dashboardadmin', function () {
-    $title = 'Dashboard';
-    $slug = 'dashboardamin';
-    return view('dashboardamin', compact('title', 'slug'));
-});
 
-Route::get('/seller/product',[productController::class,'index']);
-Route::get('/seller/product/create',[productController::class,'create']);
-Route::post('/seller/product/store',[productController::class,'store']);
-Route::get('/seller/product/edit/{id}',[productController::class,'edit']);
-Route::post('/seller/product/update/{id}',[productController::class,'update']);
-Route::get('/seller/product/destroy/{id}',[productController::class,'destroy']);
 
-Route::get('/user', [userController::class, 'index']);
-Route::get('/user/create', [userController::class, 'create']);
-Route::post('/user/store', [userController::class, 'store']);
-Route::get('/user/edit/{id}', [userController::class, 'edit']);
-Route::post('/user/update/{id}', [userController::class, 'update']);
-Route::get('/user/destroy/{id}', [userController::class, 'destroy']);
 
-Route::get('/profil',[profilController::class,'index']);
-Route::get('/profil/create',[profilController::class,'create']);
-Route::post('/profil/store',[profilController::class,'store']);
-Route::get('/profil/edit/{id}',[profilController::class,'edit']);
-Route::post('/profil/update/{id}',[profilController::class,'update']);
-Route::get('/profil/destroy/{id}',[profilController::class,'destroy']);
 
-Route::get('seller/transaksi', [TransaksiController::class, 'index']);
-Route::get('seller/transaksi/destroy/{id}', [TransaksiController::class, 'destroy']);
 
-Route::get('/cart', [ChartController::class, 'index']);
-
-Route::get('/checkout',[CheckoutController::class,'index']);
-Route::post('/checkout',[CheckoutController::class,'store']);
 
 Route::get('/akad', [akadController::class, 'index']);
 

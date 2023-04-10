@@ -8,7 +8,7 @@ mySQL version : 15.1
 
 INSTALASI :
 1. Clone repository Laravel dari GitHub menggunakan perintah git clone:
-git clone https://github.com/laravel/laravel.git
+git clone https://github.com/anserTresna/Buat.in.git
 2. Masuk ke direktori Laravel yang baru saja di-clone:
 cd laravel
 3. Install dependencies Laravel menggunakan Composer:

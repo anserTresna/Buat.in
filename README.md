@@ -10,7 +10,7 @@ INSTALASI :
 1. Clone repository Laravel dari GitHub menggunakan perintah git clone:
 git clone https://github.com/anserTresna/Buat.in.git
 2. Masuk ke direktori Laravel yang baru saja di-clone:
-cd laravel
+cd nama file
 3. Install dependencies Laravel menggunakan Composer:
 composer install
 4. Salin file .env.example menjadi file .env:

@@ -1,5 +1,5 @@
 DESKRIPSI :
-Buat.in merupakan layanan pemasaran jasa wedding organizer yang membantu pasangan mengatur acara pernikahan mereka dengan profesional. Kami menawarkan berbagai layanan, mulai dari menentukan tema dan konsep hingga mencari vendor yang sesuai dengan budget.
+Buat.in merupakan layanan pemasaran jasa wedding organizer yang membantu pasangan mengatur acara pernikahan mereka dengan profesional. Kami menawarkan berbagai layanan, mulai dari menentukan tema dan konsep hingga mencari vendor yang sesuai dengan budget. Pada sistem informasi ini, kami membuat sebuah booking jasa event organizer yang memiliki beberapa paket yang disertai dengan informasi mengenai harga, gambar referensi, dan include apa saja yang didapat dari paket yang dipilih.
 
 SPESIFIKASI :
 Laravel version : 9.19

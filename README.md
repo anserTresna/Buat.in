@@ -1,66 +1,47 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+DESKRIPSI :
+Buat.in merupakan layanan pemasaran jasa wedding organizer yang membantu pasangan mengatur acara pernikahan mereka dengan profesional. Kami menawarkan berbagai layanan, mulai dari menentukan tema dan konsep hingga mencari vendor yang sesuai dengan budget.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+SPESIFIKASI :
+Laravel version : 9.19
+PHP Version : 8.0.2
+mySQL version : 15.1
 
-## About Laravel
+INSTALASI :
+1. Clone repository Laravel dari GitHub menggunakan perintah git clone:
+git clone https://github.com/laravel/laravel.git
+2. Masuk ke direktori Laravel yang baru saja di-clone:
+cd laravel
+3. Install dependencies Laravel menggunakan Composer:
+composer install
+4. Salin file .env.example menjadi file .env:
+cp .env.example .env
+5. Generate key aplikasi Laravel:
+php artisan key:generate
+6. Jalankan server Laravel menggunakan perintah:
+php artisan serve
+Buka browser dan akses http://localhost:8000 untuk melihat halaman awal Laravel.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Import Database
+1. Buka file .env pada direktori Laravel dan atur konfigurasi database seperti nama database, username, password, dan host. Pastikan bahwa konfigurasi ini sesuai dengan konfigurasi pada server MySQL atau MariaDB.
+2. Lakukan migrasi database menggunakan perintah artisan:
+php artisan migrate
+Perintah ini akan membuat tabel-tabel yang dibutuhkan oleh aplikasi Laravel.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Credentials
+1. Admin 
+username : admin@gmail.com
+password : 123456
+2. Seller
+username :seller@gmail.com
+password :123456
+3. User
+username : tresna@gmail.com
+password : 123456
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+PENANGGUNG JAWAB :
+alfiyah 085943540347
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+NAMA KELOMPOK
+Alfiyah Djayanti    (2103062)
+Cindy Apriliyani    (2103064)
+Tresna Subakti      (21030860
